@@ -11,8 +11,49 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--Custom fonts-->
+    <!--Custom fonts and Wrapper thing-->
     <style>
+       .wrapper
+       {
+          display: grid;
+          grid-template-columns: 25% 50% 25%;
+          grid-template-rows: 15% 90% 5%;
+       }
+
+       .header
+       {
+          grid-column-start: 1;
+          grid-column-end: 4;
+       }
+
+       .left
+       {
+          grid-row-start: 2;
+          grid-column-start: 1;
+          grid-column-end: 2;
+       }
+
+       .right
+       {
+          grid-row-start: 2;
+          grid-column-start: 3;
+          grid-column-end: 4;
+       }
+
+       .center
+       {
+         grid-row-start: 2;
+          grid-column-start: 2;
+          grid-column-end: 3;
+       }
+
+       .footer
+       {
+          grid-row-start: 3;
+          grid-column-start: 1;
+          grid-column-end: 4;
+       }
+
        @font-face { font-family: OldLondon; src: url('OldLondon.ttf'); } 
        @font-face { font-family: OldLondon; font-weight: bold; src: url('OldLondon.ttf');}
     </style>
@@ -23,45 +64,67 @@
 
   <body style="background-color: #101010;">
 
-    <h1 style="color: white; text-align: center; margin-top: 10px; font-family: OldLondon; font-size: 72px;">
-      Raxus Church <span class="badge badge-success" style="color: #252525">Web</span>
-    </h1>
+    <div class="wrapper"> <!--CSS grid-->
 
-    <br/>
-
-    <div class="alert alert-light" style="margin-left: 25%; margin-right: 25%; font-size: 26px; text-align: center;" role="alert">
-      <i>"I'd never name a baby 'mommy milkers'"</i>
-    </div>
-
-    <div class="alert alert-dark" style="margin-left: 25%; margin-right: 25%; text-align: center;" role="alert">
-      <p class="mb-0" style="font-size: 24px;">-You too? Not? <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>Join anyways!</strong></a></p>
-    </div>
-
-    <br/>
-
-    <div class="card" style="width: 18rem; margin-left: 20px;">
-      <img class="card-img-top" src="propaganda.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Raxus Church</h5>
-        <p class="card-text">School's out! Get kids in the Church for summertime fun in the Church of Raxus.</p>
-        <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Join now</a>
+      <div class="header">
+        <h1 style="color: white; text-align: center; margin-top: 10px; font-family: OldLondon; font-size: 72px;">
+          Raxus Church <span class="badge badge-success" style="color: #252525">Web</span>
+        </h1>
       </div>
-    </div>
 
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a style="font-size: 21px; margin-left: 10px;" class="badge badge-primary" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
-      </li>
-      <li class="nav-item">
-        <a style="font-size: 21px; margin-left: 10px;" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
-      </li>
-      <li class="nav-item">
-        <a style="font-size: 21px; margin-left: 10px;" class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
-      </li>
-      <li class="nav-item">
-        <p style="font-size: 23px; margin-left: 10px; color: white;">- <strong>Freebird Community</strong>, 2021</p>
-      </li>
-    </ul>
+      <br/>
+
+      <div class="center">
+        <div class="alert alert-light" style="margin-left: 25%; margin-right: 25%; font-size: 26px; text-align: center;" role="alert">
+          <i>"I'd never name a baby 'mommy milkers'"</i>
+        </div>
+        <div class="alert alert-dark" style="margin-left: 25%; margin-right: 25%; text-align: center;" role="alert">
+          <p class="mb-0" style="font-size: 24px;">-You too? Not? <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>Join anyways!</strong></a></p>
+        </div>
+      </div>
+
+      <br/>
+
+      <div class="left">
+        <div class="card" style="width: 18rem; margin-left: 20px;">
+          <img class="card-img-top" src="propaganda.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Raxus Church</h5>
+            <p class="card-text">School's out! Get kids in the Church for summertime fun in the Church of Raxus.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Join now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="card" style="width: 18rem; margin-left: 20px;">
+          <img class="card-img-top" src="raxaganda.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Church of Raxus</h5>
+            <p class="card-text">Do you feel empty? We know you do, and Raxus Church can help you get over it.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Get blessed</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a style="font-size: 21px; margin-left: 10px;" class="badge badge-primary" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: 21px; margin-left: 10px;" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: 21px; margin-left: 10px;" class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
+          </li>
+          <li class="nav-item">
+            <p style="font-size: 23px; margin-left: 10px; color: white;">- <strong>Freebird Community</strong>, 2021</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
