@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <meta content="Rax Vax" name="description">
+    <meta content="The Church of Raxus" name="author">
+    <title>Church of Raxus</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/material.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-md-flex col-2 p-0">
+                <div class="card h-fluid">
+                    <img class="card-img-top" src="./propaganda/propaganda.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">The Church of Raxus</h5>
+                        <p class="card-text">long ad text 1</p>
+                        <a href="#" class="btn btn-primary">Join Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col p-0">
+                        <nav class="navbar navbar-dark shadow-sm bg-primary text-center">
+                            <span class="navbar-brand mb-0 h1">The Church of Raxus</span>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-flex col-2 p-0">
+                <div class="card h-fluid">
+                    <img class="card-img-top" src="./propaganda/propaganda.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-right">The Church of Raxus</h5>
+                        <p class="card-text text-right">long ad text 1</p>
+                        <div class="text-right">
+                            <a href="#" class="btn btn-primary ml-auto">Join Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="css/material.min.js"></script>
+<script>
+    const quotes = ["I'd never name a baby 'mommy milkers'", "People don’t think it be like it is, but it do.", "You’ll always be my little pogchamp", "Everyone asks if they’re my little pogchamp, but no one ever asks how their server dad is doing", "You're walking in the Caledon Fairgrounds<br>There's no one around and your phone is dead<br>Out of the corner of your eye you spot him:<br>Kan Gao.<br>He's following you, about 30 mooses back.<br>He gets down on all fours and starts shouting probably copyrighted attack warcries<br>He's galloping at you.<br>Kan Gao.<br>You're looking for the World’s Smallest Ferris Wheel but you're all turned around<br>He's almost upon you now<br>And you can see there's blood on his face<br>My God, there's tentacles too!<br>Running for your life (from Kan Gao)<br>He's brandishing long cat (holding a knife)<br>Cthulhu tentacles spreading out (from Kan Gao)<br>Indie Game developer Kan Gao", "In 2003, I was camping in the Chilean mountains. After an Ayahuasan ceremony, a Canadian group camped near by. A man, who I had never met before, snuck into my tent mid-trip and made me write out my hallucinations on alpaca wool, using macaroni, Capri-Suns, and raccoon feces. His name was Kan Gao and my name is Quincy.", "Breasts are temporary. Rome is forever.", "Nothing wrong with me loving Moony's mommy milkers", "Pure-chan...<br>Nyaaa", "I want Pure to take a picture of my crotch.", "Mommy milkers", "*lights a cigarette*", "I’ll show you true pain.", "If humans are innately good, why aren’t all shopping carts returned?", "The worst part of growing up is when no one gets excited if you poop in the toilet."];
+    const ads = ["School's out! Get kids in the Church for summertime fun in the Church of Raxus.", "Do you feel empty? We know you do, and Church of Raxus can help you get over it.", "You Don't Have To Change Who You Are To Join The Church Of Raxus.", "Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.", "The #1 Discord Server to meet new friends."];
+    const quote = Math.floor(Math.random() * Math.floor(quotes.length));
+    console.log(quote)
+    document.getElementById("quote").innerHTML = `"${quotes[quote]}"`;
+</script>
+</body>
+
+</html>
