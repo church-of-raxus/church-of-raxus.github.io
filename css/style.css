@@ -1,43 +1,43 @@
-/*.wrapper*/
-/*{*/
-/*    display: grid;*/
-/*    grid-template-columns: 25% 50% 25%;*/
-/*    grid-template-rows: 15% 90% 5%;*/
-/*}*/
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 15% 75% 10%;
+}
 
-/*.header*/
-/*{*/
-/*    grid-column-start: 1;*/
-/*    grid-column-end: 4;*/
-/*}*/
+.header
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 
-/*.left*/
-/*{*/
-/*    grid-row-start: 2;*/
-/*    grid-column-start: 1;*/
-/*    grid-column-end: 2;*/
-/*}*/
+.left
+{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 
-/*.right*/
-/*{*/
-/*    grid-row-start: 2;*/
-/*    grid-column-start: 3;*/
-/*    grid-column-end: 4;*/
-/*}*/
+.right
+{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
 
-/*.center*/
-/*{*/
-/*    grid-row-start: 2;*/
-/*    grid-column-start: 2;*/
-/*    grid-column-end: 3;*/
-/*}*/
+.center
+{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 
-/*.footer*/
-/*{*/
-/*    grid-row-start: 3;*/
-/*    grid-column-start: 1;*/
-/*    grid-column-end: 4;*/
-/*}*/
+.footer
+{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 @font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
 @font-face { font-family: OldLondon; font-weight: bold; src: url('../OldLondon.ttf');}
 .h-fluid {
