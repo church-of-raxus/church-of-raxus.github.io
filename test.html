@@ -68,6 +68,19 @@
     const quote = Math.floor(Math.random() * Math.floor(quotes.length));
     console.log(quote)
     document.getElementById("quote").innerHTML = `"${quotes[quote]}"`;
+
+    function raxCoin(action, balance) {
+        if(action) {
+            if(localStorage.getItem("bal") == null) {
+                return 0;
+            }
+            return localStorage.getItem("bal")
+        }
+        if(balance != null) {
+            localStorage.setItem("bal", balance);
+        }
+    }
+
 </script>
 </body>
 
