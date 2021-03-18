@@ -46,3 +46,34 @@
 .w-fluid {
     width: 100%;
 }
+.o-md-1 {
+    opacity: 0;
+}
+@media(min-width: 768px) {
+    .o-md-1 {
+        opacity: 1;
+    }
+}
+@media(max-width: 767px) {
+    .h-umd-0 {
+        height: 100px;
+    }
+}
+.landing-img {
+    background-image: url("../propaganda/face.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.raxmode {
+    --primary: #F28E30;
+    --primary-dark: #F28E30;
+    --primary-light: #F28E30;
+}
+.spacer {
+    width: 100%;
+    height: 20px;
+}
+.cursor-hand {
+    cursor: pointer;
+}
