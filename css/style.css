@@ -2,7 +2,7 @@
 {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 15% 75% 10%;
+    grid-template-rows: 5% 90% 5%;
 }
 
 .header
@@ -37,6 +37,20 @@
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 4;
+}
+@media only screen and (max-width: 991px) {
+    .left 
+    {
+        display: none;
+    }
+    .right 
+    {
+        display: none;
+    }
+    .wrapper 
+    {
+        grid-template-columns: 10% 80% 10%;
+    }
 }
 @font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
 @font-face { font-family: OldLondon; font-weight: bold; src: url('../OldLondon.ttf');}
