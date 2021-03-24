@@ -9,7 +9,7 @@ body
 {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-rows: 5% 95%;
 }
 
 header
@@ -39,11 +39,26 @@ main
     grid-column-end: 3;
 }
 
+div.card-header
+{
+    background-color: #191919;
+    color:white; 
+    font-size: 20px;   
+}
+
+img.article
+{
+    align-self: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
 footer
 {
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 4;
+    margin-top: 1%;
 }
 @media only screen and (max-width: 991px) {
     .left 
