@@ -55,10 +55,11 @@
 
       <main>
         <div class="alert alert-light" style="font-size: 26px; text-align: center;" role="alert">
-          <i id="quote">help why is this not working</i>
-        </div>
-        <div class="alert alert-dark" style="text-align: center;" role="alert">
-          <p class="mb-0" style="font-size: 24px;">- Raxus said once. Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
+          <blockquote class="blockquote">
+            <em class="mb-0" id="quote">help why is this not working</em>
+            <footer class="blockquote-footer"><cite>Raxus</cite> said once.</footer>
+          </blockquote>
+          <p class="mb-0" style="font-size: 24px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
         </div>
 
         <!--Article-->
@@ -66,15 +67,15 @@
           <div class="card-header">
             <em>Server bot?!  <span class="badge badge-secondary">Church theories pt. 1</span></em>
           </div>
-          <img class="card-img-top article" src="/propaganda/bot.png" style="width: 50%;" alt="Duck quack">
+          <img class="card-img-top article" src="./propaganda/bot.png" style="width: 50%;" alt="Duck quack">
           <div class="card-body" style="background: #191919;">    
             <div class="dropdown">
-              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#serverbot" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#serverbot" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Who is this?
               </button>
               <div class="collapse" id="serverbot">
                 <div class="card card-body" style="color: white; background-color: #101010; font-size: 20px;">
-                  There is some text that should be changed.
+                  Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg.
                 </div>
               </div>
             </div>
@@ -86,15 +87,17 @@
           <div class="card-header" style="background-color: #191919; color:white; font-size: 20px;">
             <em>Quacky Ducky Duck! Church had opened!</em>
           </div>
-          <img class="card-img-top article" src="/propaganda/duck.png" style="width: 25%;" alt="Duck quack">
+          <img class="card-img-top article" src="./propaganda/duck.png" style="width: 25%;" alt="Duck quack">
           <div class="card-body" style="background: #191919;">    
             <div class="dropdown">
-              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#duckthing" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#duckthing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Why not join?
               </button>
               <div class="collapse" id="duckthing">
                 <div class="card card-body" style="color: white; background-color: #101010; font-size: 20px;">
-                  www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>www.raxus-church.ml<br>
+                  <p>
+                    Why not join? There's no reason to not join! <a href="https://discord.com/invite/XaucJHh8J2" class="font-weight-bold">Join Now!</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -105,7 +108,7 @@
 
       <div class="left">
         <div class="card" style="width: 60%; margin-left: 10%;">
-          <img class="card-img-top" src="propaganda/propaganda.png" alt="Join Raxus advertisement">
+          <img class="card-img-top" src="./propaganda/propaganda.png" alt="Join Raxus advertisement">
           <div class="card-body">
             <h5 class="card-title">Raxus Church</h5>
             <p class="card-text">School's out! Get kids in the Church for summertime fun in the Church of Raxus.</p>
@@ -180,7 +183,7 @@
 
       coins = parseInt(coins) + 1;
       Cookies.set('RaxusCoinCount', coins);
-      document.getElementById("coin-count").innerHTML = "Currently you have " + coins + " Raxus Coins!";
+      document.getElementById("coin-count").innerHTML = `Currently you have ${coins} (unofficial) Raxus Coins!`;
       ///-------------------------------------------------------------------------------------///
     </script>
   </body>
