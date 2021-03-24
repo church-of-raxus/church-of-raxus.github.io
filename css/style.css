@@ -1,3 +1,10 @@
+@font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
+
+body
+{
+    background-color: #101010;
+}
+
 .wrapper
 {
     display: grid;
@@ -5,7 +12,7 @@
     grid-template-rows: 5% 90% 5%;
 }
 
-.header
+header
 {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -25,14 +32,14 @@
     grid-column-end: 4;
 }
 
-.center
+main
 {
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.footer
+footer
 {
     grid-row-start: 3;
     grid-column-start: 1;
@@ -52,8 +59,7 @@
         grid-template-columns: 10% 80% 10%;
     }
 }
-@font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
-@font-face { font-family: OldLondon; font-weight: bold; src: url('../OldLondon.ttf');}
+
 .h-fluid {
     height: 100vh;
 }
