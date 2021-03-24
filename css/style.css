@@ -1,0 +1,83 @@
+@font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
+
+body
+{
+    background-color: #101010;
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 5% 95%;
+}
+
+header
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.left
+{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.right
+{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+main
+{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+div.card-header
+{
+    background-color: #191919;
+    color:white; 
+    font-size: 20px;   
+}
+
+img.article
+{
+    align-self: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+footer
+{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 1%;
+}
+@media only screen and (max-width: 991px) {
+    .left 
+    {
+        display: none;
+    }
+    .right 
+    {
+        display: none;
+    }
+    .wrapper 
+    {
+        grid-template-columns: 10% 80% 10%;
+    }
+}
+
+.h-fluid {
+    height: 100vh;
+}
+.w-fluid {
+    width: 100%;
+}

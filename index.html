@@ -2,53 +2,190 @@
 <html lang="en">
 <html>
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <title>Church of Raxus</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Required meta tags -->
     <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <meta content="Church of Raxus is a cool meme website featuring Raxus and Co. Here you can find cool quotes and join us." name="description">
+    <meta content="Freebird Community" name="author">
 
     <!-- CSS -->
-    <!-- Add Material font (Roboto) and Material icon as needed -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Add Material CSS, replace Bootstrap CSS -->
     <link href="css/material.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
 
-  <body style="background-color: #101010;">
-
-    <h1 style="color: white; text-align: center; margin-top: 10px;">
-      Raxus Church <span class="badge badge-success" style="color: #252525">Web</span>
+  <body>
+    
+    <h1 style="color: white; text-align: center; margin-top: 10px; font-family: OldLondon; font-size: 72px;">
+      Raxus Church
     </h1>
 
-    <br/>
+    <!--Navigation bar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="raxus.html">Raxus Mode</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/XaucJHh8J2">Join church</a>
+          </li>
+        </ul>
 
-    <div class="alert alert-light" style="margin-left: 30%; margin-right: 30%; font-size: 32px; text-align: center;" role="alert">
-      <i>Mommy milkers!</i>
+        <span class="navbar-text" id="coin-count">
+          Currently you have 0 Raxus Coins!
+        </span>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <header>
+
+      </header>
+
+      <main>
+        <div class="alert alert-light" style="font-size: 26px; text-align: center;" role="alert">
+          <blockquote class="blockquote">
+            <em class="mb-0" id="quote">help why is this not working</em>
+            <footer class="blockquote-footer"><cite>Raxus</cite> said once.</footer>
+          </blockquote>
+          <p class="mb-0" style="font-size: 24px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
+        </div>
+
+        <!--Article-->
+        <div class="card text-center" style="background-color: #191919">
+          <div class="card-header">
+            <em>Server bot?!  <span class="badge badge-secondary">Church theories pt. 1</span></em>
+          </div>
+          <img class="card-img-top article" src="./propaganda/bot.png" style="width: 50%;" alt="Duck quack">
+          <div class="card-body" style="background: #191919;">    
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#serverbot" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Who is this?
+              </button>
+              <div class="collapse" id="serverbot">
+                <div class="card card-body" style="color: white; background-color: #101010; font-size: 20px;">
+                  Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Article-->
+        <div class="card text-center" style="background-color: #191919; margin-top: 20px;">
+          <div class="card-header" style="background-color: #191919; color:white; font-size: 20px;">
+            <em>Quacky Ducky Duck! Church had opened!</em>
+          </div>
+          <img class="card-img-top article" src="./propaganda/duck.png" style="width: 25%;" alt="Duck quack">
+          <div class="card-body" style="background: #191919;">    
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#duckthing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Why not join?
+              </button>
+              <div class="collapse" id="duckthing">
+                <div class="card card-body" style="color: white; background-color: #101010; font-size: 20px;">
+                  <p>
+                    Why not join? There's no reason to not join! <a href="https://discord.com/invite/XaucJHh8J2" class="font-weight-bold">Join Now!</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <div class="left">
+        <div class="card" style="width: 60%; margin-left: 10%;">
+          <img class="card-img-top" src="./propaganda/propaganda.png" alt="Join Raxus advertisement">
+          <div class="card-body">
+            <h5 class="card-title">Raxus Church</h5>
+            <p class="card-text">School's out! Get kids in the Church for summertime fun in the Church of Raxus.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Join now</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right">
+        <div class="card" style="width: 60%; margin-left: 30%;">
+          <img class="card-img-top" src="propaganda/propaganda_5.0.png" alt="Join Church advertisement">
+          <div class="card-body">
+            <h5 class="card-title">Church of Raxus</h5>
+            <p class="card-text">Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Get blessed</a>
+          </div>
+        </div>
+        <iframe src="https://discord.com/widget?id=777617288417247273&theme=dark" style=" width:60%; height:50%; margin-left:30%; margin-top: 10%" allowtransparency="true" frameborder="0" title="Connect to the Church" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+
+     <footer>
+        <!--Bottom links-->
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+           <a style="font-size: 21px;" class="badge badge-primary" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
+          </li>
+           <li class="nav-item">
+           <a style="font-size: 21px; margin-left: 10px;" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
+          </li>
+          <li class="nav-item">
+           <a style="font-size: 21px; margin-left: 10px;" class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
+          </li>
+          <li class="nav-item">
+           <span style="font-size: 21px; margin-left: 10px; color: white;">- <strong>Freebird Community</strong>, 2021</span>
+          </li>
+        </ul>
+      </footer>
+
     </div>
-
-    <br/>
-
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a style="font-size: 21px; margin-left: 10px;" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
-      </li>
-      <li class="nav-item">
-        <a style="font-size: 21px; margin-left: 10px;" class="badge badge-primary" href=" https://discord.gg/MDxRZCx">Discord</a>
-      </li>
-      <li class="nav-item">
-        <p style="font-size: 23px; margin-left: 10px; color: white;">| 2021 Freebird Community</p>
-      </li>
-    </ul>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+    <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/material.min.js"></script>
+    
+    <script type="module" src="./js/js.cookie.js"></script>
+    <script type="module">
 
-    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
-    <script src="css/material.min.js"></script>
+      ///------------------------------------Quote chooser------------------------------------///
+      const quotes = ["I'd never name a baby 'mommy milkers'", "People don’t think it be like it is, but it do.", "You’ll always be my little pogchamp", "Everyone asks if they’re my little pogchamp, but no one ever asks how their server dad is doing", "You're walking in the Caledon Fairgrounds<br>There's no one around and your phone is dead<br>Out of the corner of your eye you spot him:<br>Kan Gao.<br>He's following you, about 30 mooses back.<br>He gets down on all fours and starts shouting probably copyrighted attack warcries<br>He's galloping at you.<br>Kan Gao.<br>You're looking for the World’s Smallest Ferris Wheel but you're all turned around<br>He's almost upon you now<br>And you can see there's blood on his face<br>My God, there's tentacles too!<br>Running for your life (from Kan Gao)<br>He's brandishing long cat (holding a knife)<br>Cthulhu tentacles spreading out (from Kan Gao)<br>Indie Game developer Kan Gao", "In 2003, I was camping in the Chilean mountains. After an Ayahuasan ceremony, a Canadian group camped near by. A man, who I had never met before, snuck into my tent mid-trip and made me write out my hallucinations on alpaca wool, using macaroni, Capri-Suns, and raccoon feces. His name was Kan Gao and my name is Quincy.", "Breasts are temporary. Rome is forever.", /*"Nothing wrong with me loving Moony's mommy milkers","I want Pure to take a picture of my crotch.", "Mommy milkers", */ "Pure-chan...<br>Nyaaa", "*lights a cigarette*", "I’ll show you true pain.", "If humans are innately good, why aren’t all shopping carts returned?", "The worst part of growing up is when no one gets excited if you poop in the toilet."];
+      const ads = ["School's out! Get kids in the Church for summertime fun in the Church of Raxus.", "You Don't Have To Change Who You Are To Join The Church Of Raxus.", "Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.", "The #1 Discord Server to meet new friends."];
+      const quote = Math.floor(Math.random() * Math.floor(quotes.length));
+        //console.log(quote)
+      document.getElementById("quote").innerHTML = `"${quotes[quote]}"`;
+      ///-------------------------------------------------------------------------------------///
+
+      ///------------------------------------------Cookie Coins-------------------------------///
+      let coins = Cookies.get('RaxusCoinCount');
+      if(typeof coins == "undefined")
+      {
+        coins = 0;
+
+        //var header = document.getElementById("header");
+        //var congratulation_msg = document.createElement("div");
+        //congratulation_msg.classList.add("alert");
+        //congratulation_msg.classList.add("alert-success");
+        //congratulation_msg.innerHTML = "Congratulations on your first (unofficial) Raxus Coin! These are used for somewhat reason we don't know";
+        //congratulation_msg.setAttribute("role", "alert");
+        //header.appendChild(congratulation_msg);
+      }
+
+      coins = parseInt(coins) + 1;
+      Cookies.set('RaxusCoinCount', coins);
+      document.getElementById("coin-count").innerHTML = `Currently you have ${coins} (unofficial) Raxus Coins!`;
+      ///-------------------------------------------------------------------------------------///
+    </script>
   </body>
   
 </html>
