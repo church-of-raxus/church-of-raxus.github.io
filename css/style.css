@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
 
 body
@@ -7,15 +8,9 @@ body
 
 .wrapper
 {
+    margin-top: 2%;
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 5% 95%;
-}
-
-header
-{
-    grid-column-start: 1;
-    grid-column-end: 4;
 }
 
 .left
@@ -23,6 +18,7 @@ header
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 2;
+    padding: 0% 30% 0% 15%;
 }
 
 .right
@@ -30,6 +26,7 @@ header
     grid-row-start: 2;
     grid-column-start: 3;
     grid-column-end: 4;
+    padding: 0% 15% 0% 30%;
 }
 
 main
@@ -58,7 +55,8 @@ footer
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 4;
-    margin-top: 1%;
+    margin-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 @media only screen and (max-width: 991px) {
     .left 
@@ -73,11 +71,4 @@ footer
     {
         grid-template-columns: 10% 80% 10%;
     }
-}
-
-.h-fluid {
-    height: 100vh;
-}
-.w-fluid {
-    width: 100%;
 }
