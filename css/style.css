@@ -1,9 +1,28 @@
 @charset "UTF-8";
 @font-face { font-family: OldLondon; src: url('../OldLondon.ttf'); }
 
+
 body
 {
     background-color: #101010;
+    background-repeat: repeat;
+    background-image: url(/propaganda/background.png); 
+}
+
+main
+{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+footer
+{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 1%;
+    padding-bottom: 0.1%;
 }
 
 .wrapper
@@ -29,13 +48,6 @@ body
     padding: 0% 15% 0% 30%;
 }
 
-main
-{
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
 div.card-header
 {
     background-color: #191919;
@@ -49,16 +61,22 @@ img.article
     margin-top: 10px; 
     margin-bottom: 10px;
 }
-
-footer
+main div.card
 {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    margin-top: 0.5%;
-    padding-bottom: 0.5%;
+    margin-top: 15px;
 }
-@media only screen and (max-width: 991px) {
+
+header h1
+{
+    color: white; 
+    text-align: center; 
+    margin-top: 10px; 
+    font-family: OldLondon, sans-serif;
+    font-size: 72px;
+}
+
+@media only screen and (max-width: 991px) 
+{
     .left 
     {
         display: none;

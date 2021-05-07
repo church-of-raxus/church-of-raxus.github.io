@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church of Raxus</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Required meta tags -->
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <meta content="Church of Raxus is a cool meme website featuring Raxus and Co. Here you can find cool quotes and join us." name="description">
+    <meta content="Freebird Community" name="author">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/material.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+
+      <h1 style="color: white; text-align: center; margin-top: 10px; font-family: OldLondon; font-size: 72px;">
+        Raxus Church
+      </h1>
+
+      <!--Navigation bar-->
+      <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+           </li>
+            <li class="nav-item">
+              <a class="nav-link" href="raxus.html">Raxus Mode</a>
+           </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://discord.gg/XaucJHh8J2">Join church</a>
+            </li>
+         </ul>
+
+         <span class="navbar-text" id="coin-count">
+            0 (unofficial)Raxus Coins
+          </span>
+        </div>
+      </nav>
+   </header>
+
+    <div class="wrapper">
+      <main>
+        <div class="alert alert-info" role="alert">
+          DISCLAIMER! All this links are stored in Cookie files, so clearing browser cache will delete them. Also note that 
+          WE DON'T TAKE RESPONSIBILITY FOR ANY OF THE LINKS STORED!
+          By continuing using this page you therefore agree to that.
+        </div>
+
+        <div style="background-color:white; border-radius: 5px;">
+          <form id="formforlink" style="margin: 10px">
+            <div class="form-group">
+              <input class="form-control" id="link title" placeholder="Enter link title">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input class="form-control" id="exampleInputPassword1" placeholder="Enter link address">
+              <small class="form-text text-muted">Type a link in full format (e.g. https://www.raxus-church.ml)</small>
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Add link</button>
+          </form>
+        </div>
+
+        <div id="linkstorage"></div>
+      </main>
+
+      <div class="left">
+        <div class="card">
+          <img class="card-img-top" src="./propaganda/propaganda.png" alt="Join Raxus advertisement">
+          <div class="card-body">
+            <h5 class="card-title">Raxus Church</h5>
+            <p class="card-text">School's out! Get kids in the Church for summertime fun in the Church of Raxus.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Join now</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right">
+        <div class="card">
+          <img class="card-img-top" src="propaganda/propaganda_5.0.png" alt="Join Church advertisement">
+          <div class="card-body">
+            <h5 class="card-title">Church of Raxus</h5>
+            <p class="card-text">Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.</p>
+            <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Get blessed</a>
+          </div>
+        </div>
+        <iframe src="https://discord.com/widget?id=777617288417247273&theme=dark" style="padding-top: 5%; height: 30%; width: 100%" allowtransparency="true" frameborder="0" title="Connect to the Church" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+
+     <footer>
+        <!--Bottom links-->
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+           <a style="font-size: 21px; margin-left: 10px;" class="badge badge-primary" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
+          </li>
+           <li class="nav-item">
+           <a style="font-size: 21px; margin-left: 10px" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
+          </li>
+          <li class="nav-item">
+           <a style="font-size: 21px; margin-left: 10px" class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
+          </li>
+          <li class="nav-item">
+           <span style="font-size: 21px; color: white;">&nbsp;- <strong>Freebird Community</strong>, 2021</span>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/material.min.js"></script>
+    
+    <script type="module" src="./js/js.cookie.js"></script>
+    <script type="module" src="./js/links.js"></script>
+  </body>
+  
+</html>
