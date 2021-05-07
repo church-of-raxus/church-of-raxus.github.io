@@ -1,0 +1,29 @@
+{
+  "name": "church-of-raxus.github.io",
+  "version": "1.0.0",
+  "description": "Praise the Freebird Games social media manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/church-of-raxus/church-of-raxus.github.io.git"
+  },
+  "author": "RudRecciah, Melumi, Maxim5995",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/church-of-raxus/church-of-raxus.github.io/issues"
+  },
+  "homepage": "https://github.com/church-of-raxus/church-of-raxus.github.io#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "jquery": "^3.6.0",
+    "pickadate": "^3.6.4"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.0",
+    "daemonite-material": "^4.1.1"
+  }
+}
