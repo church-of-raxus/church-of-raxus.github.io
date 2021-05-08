@@ -25,7 +25,7 @@
       <h1>Raxus Church</h1>
     </header>
 
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark" style="font-family: Quicksand, sans-serif">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-color:rgba(50, 50, 50, 0.95);">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,6 +33,9 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">History</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://discord.gg/XaucJHh8J2">Join church</a>
@@ -47,66 +50,18 @@
 
     <div class="wrapper">
       <main>
-        <div class="alert alert-light animate__animated animate__jackInTheBox" style="font-size: 26px; text-align: center;" role="alert">
+        <noscript>This webpage requires JavaScript to work properly. Please turn it on or use another browser.</noscript>
+        <div class="alert alert-light animate__animated animate__jackInTheBox text-center" role="alert">
           <blockquote class="blockquote">
             <em class="mb-0" id="quote">"I'd never name a baby 'mommy milkers'"</em>
             <footer class="blockquote-footer"><cite>Raxus</cite> said once.</footer>
           </blockquote>
           <p class="mb-0" style="font-size: 18px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
         </div>
-        <!-- Articles -->
-        <div id="posts">
-          <div class="card text-center animate__animated animate__bounceIn" style="background-color: #cf2b62">
-            <div class="card-header" style="background-color: #ff4081;">
-              <em>Hmm-Hmm-Hmmm</em> -- Church Indeterminance Report
-            </div>
-            <img class="card-img-top article" src="./propaganda/hmm.png" style="width: 75%;" alt="Duck quack">
-            <div class="card-body" style="background: #ff4081;">
-            </div>
-          </div>
-          <div class="card text-center animate__animated animate__bounceIn" style="background-color: #89249b; animation-delay: 0.1s;">
-            <div class="card-header" style="background-color: #9b27af;">
-              <em>"Server bot?!" </em>-- Church Theories pt.1
-            </div>
-            <img class="card-img-top article" src="./propaganda/bot.png" style="width: 50%;" alt="Duck quack">
-            <div class="card-body" style="background: #9b27af;">
-              <div class="dropdown">
-                <button class="btn btn-outline-light dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#serverbot" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Who is this?
-                </button>
-                <div class="collapse" id="serverbot">
-                  <div class="card card-body" style="color: white; background-color: #89249b; font-size: 20px;">
-                    Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card text-center  animate__animated animate__bounceIn" style="background-color: #1d78c2; animation-delay: 0.2s">
-            <div class="card-header" style="background-color: #2196f3; color:white; font-size: 20px;">
-              <em>Quacky Ducky Duck! Church had opened!</em>
-            </div>
-            <img class="card-img-top article" src="./propaganda/duck.png" style="width: 25%;" alt="Duck quack">
-            <div class="card-body" style="background: #2196f3;">
-              <div class="dropdown">
-                <button class="btn btn-outline-light dropdown-toggle btn-block" type="button" data-toggle="collapse" href="#duckthing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Why not join?
-                </button>
-                <div class="collapse" id="duckthing">
-                  <div class="card card-body" style="color: white; background-color: #1d78c2; font-size: 20px;">
-                    <p>
-                      Why not join? There's no reason to not join! <a href="https://discord.com/invite/XaucJHh8J2" class="font-weight-bold" style="color: white;">Join Now!</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div id="posts"></div>
       </main>
 
-      <div class="left animate__animated animate__fadeIn" style="animation-delay: 0.1s; animation-duration: 0.5s;">
+      <div class="left animate__animated animate__fadeIn">
         <div class="card">
           <img class="card-img-top" src="./propaganda/propaganda.png" alt="Join Raxus advertisement">
           <div class="card-body">
@@ -117,7 +72,7 @@
         </div>
       </div>
       
-      <div class="right animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+      <div class="right animate__animated animate__fadeIn">
         <div class="card">
           <img class="card-img-top" src="propaganda/propaganda_5.0.png" alt="Join Church advertisement">
           <div class="card-body">
@@ -126,32 +81,32 @@
             <a class="btn btn-primary" href="https://discord.gg/XaucJHh8J2">Get blessed</a>
           </div>
         </div>
-        <iframe class="animate__animated animate__fadeIn" src="https://discord.com/widget?id=777617288417247273&theme=dark" style="padding-top: 10px; height: 30%; width: 100%" allowtransparency="true" frameborder="0" title="Connect to the Church" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe class="animate__animated animate__fadeIn" src="https://discord.com/widget?id=777617288417247273&theme=dark" style="padding-top: 10px; height: 350px; width: 100%" allowtransparency="true" frameborder="0" title="Connect to the Church" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </div>
 
      <footer>
         <!--Bottom links-->
         <ul class="nav justify-content-center">
           <li class="nav-item">
-           <a style="font-size: 21px; margin-left: 10px;" class="badge badge-light" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
+           <a class="badge badge-light" href="https://discord.gg/XaucJHh8J2">Join the Church</a>
           </li>
 
           <li class="nav-item">
-            <a style="font-size: 21px; margin-left: 10px;" class="badge badge-dark" href="raxus.html">Raxus Mode</a>
+            <a class="badge badge-dark" href="raxus.html">Raxus Mode</a>
            </li>
 
            <p style="font-size: 21px; margin-left: 10px; color:white">&nbsp;</p>
 
            <li class="nav-item">
-           <a style="font-size: 21px; margin-left: 10px" class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
+           <a class="badge badge-secondary" href="https://rudrecciah.dev">RudRecciah</a>
           </li>
 
           <li class="nav-item">
-           <a style="font-size: 21px; margin-left: 10px" class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
+           <a class="badge badge-info" href="https://www.melumi.ml/">Melumi</a>
           </li>
           
           <li class="nav-item">
-            <a style="font-size: 21px; margin-left: 10px" class="badge badge-primary" href="https://www.maxim5995.site/">Maxim5995</a>
+            <a class="badge badge-primary" href="https://www.maxim5995.site/">Maxim5995</a>
            </li>
 
           <li class="nav-item">

@@ -6,7 +6,17 @@ body
 {
     background-color: #101010;
     background-repeat: repeat;
-    background-image: url(/propaganda/background.png); 
+    background-image: url(/propaganda/background.png);
+    font-family: Quicksand, sans-serif
+}
+#history
+{
+    background-color: rgb(230, 180, 150);
+    background-image: url(/propaganda/paper.png);
+    background-size: cover;
+    font-family: OldLondon, sans-serif;
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 main
@@ -27,7 +37,7 @@ footer
 
 .wrapper
 {
-    margin-top: 2%;
+    margin-top: 15px;
     display: grid;
     grid-template-columns: 25% 50% 25%;
 }
@@ -38,6 +48,7 @@ footer
     grid-column-start: 1;
     grid-column-end: 2;
     padding: 0% 30% 0% 15%;
+    animation-delay: 0.1s; animation-duration: 0.5s;
 }
 
 .right
@@ -46,6 +57,7 @@ footer
     grid-column-start: 3;
     grid-column-end: 4;
     padding: 0% 15% 0% 30%;
+    animation-delay: 0.2s;
 }
 
 div.card-header
@@ -64,6 +76,14 @@ img.article
 main div.card
 {
     margin-top: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.card-body:last-child
+{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 header h1
@@ -73,6 +93,12 @@ header h1
     margin-top: 10px; 
     font-family: OldLondon, sans-serif;
     font-size: 72px;
+}
+
+ul.nav li a
+{
+    font-size: 21px; 
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 991px) 

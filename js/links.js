@@ -1,10 +1,9 @@
-    let links = Cookies.get('Links');
-    let titles = Cookies.get('Titles');
-
-    if(typeof links == "undefined")
+    let links = localStorage.getItem('Links');
+    let titles = localStorage.getItem('Titles');
+    if(links == "NaN")
     {
-        Cookies.set('Links', 'https://www.raxus-church.ml ');
-        Cookies.set('Titles', 'Raxus-Church ');
+        localStorage.setItem('Links', 'https://www.raxus-church.ml ');
+        localStorage.setItem('Titles', 'Raxus-Church ');
     }
 
     let form = document.getElementById("formforlink");
@@ -16,8 +15,8 @@
         var title = document.forms[0][0].value;
         var address = document.forms[0][1].value;
 
-        Cookies.set('Links', Cookies.get('Links') + `${address}` + " ");
-        Cookies.set('Titles', Cookies.get('Titles') + `${title}` + " ");
+        localStorage.setItem('Links', localStorage.getItem('Links') + `${address}` + " ");
+        localStorage.setItem('Titles', localStorage.getItem('Titles') + `${title}` + " ");
         form.submit();
     });
 

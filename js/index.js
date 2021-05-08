@@ -8,8 +8,8 @@ document.getElementById("quote").innerHTML = `"${quotes[quote]}"`;
 ///-------------------------------------------------------------------------------------///
 
 ///------------------------------------------Cookie Coins-------------------------------///
-let coins = Cookies.get("RaxusCoinCount");
-if(typeof coins == "undefined")
+let coins = localStorage.getItem("RaxusCoinCount");
+if(coins == "NaN")
 {
   coins = 0;
 
@@ -23,6 +23,6 @@ if(typeof coins == "undefined")
 }
 
 coins = parseInt(coins) + 1;
-Cookies.set("RaxusCoinCount", coins);
+localStorage.setItem("RaxusCoinCount", coins);
 document.getElementById("coin-count").innerHTML = `${coins} (unofficial) Raxus Coins`;
 ///-------------------------------------------------------------------------------------///

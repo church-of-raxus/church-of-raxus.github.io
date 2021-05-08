@@ -1,38 +1,62 @@
 {
   "posts": [
     {
-      "id": "",
-      "header": "Server bot?! -- Church Theories pt. 1",
-      "color": "#9b27af",
+
+      "id": "3",
+      "header": "Hmm-Hmm-Hmm -- Church Indeterminance Report",
+      "color": "rgb(255, 64, 129)",
       "animation": {
         "name": "bounceIn",
         "delay": 0
       },
       "image": {
-        "path": "./propaganda/background.png",
+        "path": "./propaganda/hmm.png",
+        "size": "75",
+        "alt": "Screenshot compilation of message and reply."
+      },
+      "body": {
+        "title": "",
+        "description": ""
+      }
+    },
+
+    {
+
+      "id": "2",
+      "header": "Server bot?! -- Church Theories pt. 1",
+      "color": "rgb(155, 39, 175)",
+      "animation": {
+        "name": "bounceIn",
+        "delay": 0
+      },
+      "image": {
+        "path": "./propaganda/bot.png",
         "size": "50",
-        "alt": "background"
+        "alt": "Screenshot of bot user in the Church Discord server named 'Fegg'"
       },
       "body": {
         "title": "WHO IS THIS?",
         "description": "Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg."
       }
     },
+
     {
-      "header": "*Server bot?!* -- Church Theories pt. 1",
-      "color": "#9b27af",
+
+      "id": "1",
+      "header": "Quacky Ducky Duck! Church had opened!",
+      "color": "rgb(33, 150, 243)",
       "animation": {
         "name": "bounceIn",
         "delay": 0
       },
       "image": {
-        "path": "",
-        "size": "",
-        "alt": ""
+        "path": "./propaganda/duck.png",
+        "size": "25",
+        "alt": "Duck quack"
       },
       "body": {
-        "title": "WHO IS THIS?",
-        "description": "Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg."
+        "title": "WHY NOT JOIN?",
+        "description": "Why not join? There's no reason to not join! Join Now!"
       }
     }
   ]
