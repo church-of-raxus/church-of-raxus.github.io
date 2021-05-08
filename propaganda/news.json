@@ -1,7 +1,39 @@
 {
   "posts": [
     {
-    
+      "id": "",
+      "header": "Server bot?! -- Church Theories pt. 1",
+      "color": "#9b27af",
+      "animation": {
+        "name": "bounceIn",
+        "delay": 0
+      },
+      "image": {
+        "path": "./propaganda/background.png",
+        "size": "50",
+        "alt": "background"
+      },
+      "body": {
+        "title": "WHO IS THIS?",
+        "description": "Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg."
+      }
+    },
+    {
+      "header": "*Server bot?!* -- Church Theories pt. 1",
+      "color": "#9b27af",
+      "animation": {
+        "name": "bounceIn",
+        "delay": 0
+      },
+      "image": {
+        "path": "",
+        "size": "",
+        "alt": ""
+      },
+      "body": {
+        "title": "WHO IS THIS?",
+        "description": "Fegg is not a human. Fegg is not an egg. Fegg is Fegg. Why Fegg? It's simple, really, Fegg. Fegg."
+      }
     }
   ]
 }
