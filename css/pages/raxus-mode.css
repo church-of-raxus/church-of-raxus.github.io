@@ -1,0 +1,92 @@
+@font-face {
+  font-family: OldLondon; src: url('../OldLondon.ttf'); }
+.h-fluid {
+  height: 100vh;
+}
+.w-fluid {
+  width: 100%;
+}
+.o-md-1 {
+  opacity: 0;
+}
+@media(min-width: 768px) {
+  .o-md-1 {
+    opacity: 1;
+  }
+}
+@media(max-width: 767px) {
+  .h-umd-0 {
+    height: 100px;
+  }
+}
+.landing-img {
+  background-image: url("../propaganda/face.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.raxmode {
+  --primary: #F28E30;
+  --primary-dark: #F28E30;
+  --primary-light: #F28E30;
+}
+.spacer {
+  width: 100%;
+  height: 20px;
+}
+.spacer-lg {
+  width: 100%;
+  height: 60px;
+}
+.spacer-d-md {
+  width: 100%;
+  height: 20px;
+}
+.h-md-500 {
+  height: 500px;
+}
+.pl {
+  padding-left: 20px;
+}
+.pr {
+  padding-right: 20px;
+}
+.cursor-hand {
+  cursor: pointer;
+}
+.font-fancy {
+  font-family: "Old London", serif;
+}
+/*variables why do you not work*/
+.bg-orange {
+  background-color: #f28e30;
+}
+.text-orange {
+  color: #f28e30;
+}
+.btn-orange, .btn-orange:active, .btn-orange:hover, .btn-orange:focus {
+  color: #f28e30;
+}
+.blockquote-orange {
+  border-left: .3125rem solid #f28e30;
+}
+@media(min-width: 768px) {
+  .spacer-d-md {
+    width: 0;
+    height: 0;
+  }
+  .h-md-500 {
+    height: auto;
+  }
+  .pl {
+    padding-left: 10px;
+  }
+  .pr {
+    padding-right: 10px;
+  }
+}
+@media(min-width: 992px) {
+  .w-lg-25 {
+    width: 25% !important;
+  }
+}

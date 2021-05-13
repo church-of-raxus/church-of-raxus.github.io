@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@font-face { font-family: OldLondon; src: url('../fonts/OldLondon.ttf'); }
+
+
+body
+{
+    background-color: #101010;
+    background-repeat: repeat;
+    background-image: url(/propaganda/background.png);
+    font-family: Quicksand, sans-serif
+}
+#history
+{
+    background-color: rgb(230, 180, 150);
+    background-image: none;
+
+    font-family: OldLondon, sans-serif;
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+main
+{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+footer
+{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 1%;
+    padding-bottom: 0.1%;
+}
+
+.wrapper
+{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.left
+{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 0% 30% 0% 15%;
+    animation-delay: 0.1s; animation-duration: 0.5s;
+}
+
+.right
+{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 0% 15% 0% 30%;
+    animation-delay: 0.2s;
+}
+
+div.card-header
+{
+    background-color: #191919;
+    color:white; 
+    font-size: 20px;   
+}
+
+img.article
+{
+    align-self: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+main div.card
+{
+    margin-top: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.card-body:last-child
+{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1
+{
+    color: white; 
+    text-align: center; 
+    margin-top: 10px; 
+    font-family: OldLondon, sans-serif;
+    font-size: 72px;
+}
+
+ul.nav li a
+{
+    font-size: 21px; 
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 991px) 
+{
+    .left 
+    {
+        display: none;
+    }
+    .right 
+    {
+        display: none;
+    }
+    .wrapper 
+    {
+        grid-template-columns: 10% 80% 10%;
+    }
+}
