@@ -1,9 +1,8 @@
 {
   "posts": [
     {
-
-      "id": "3",
       "header": "Hmm-Hmm-Hmm -- Church Indeterminance Report",
+      "author": "The Church",
       "color": "rgb(255, 64, 129)",
       "animation": {
         "name": "bounceIn",
@@ -21,9 +20,8 @@
     },
 
     {
-
-      "id": "2",
       "header": "Server bot?! -- Church Theories pt. 1",
+      "author": "The Church",
       "color": "rgb(155, 39, 175)",
       "animation": {
         "name": "bounceIn",
@@ -41,9 +39,8 @@
     },
 
     {
-
-      "id": "1",
       "header": "Quacky Ducky Duck! Church had opened!",
+      "author": "The Church",
       "color": "rgb(33, 150, 243)",
       "animation": {
         "name": "bounceIn",

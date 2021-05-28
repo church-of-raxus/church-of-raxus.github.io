@@ -51,6 +51,15 @@ footer
     animation-delay: 0.1s; animation-duration: 0.5s;
 }
 
+#profile-picture
+{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+
+    margin-right: 5px;
+}
+
 .right
 {
     grid-row-start: 2;

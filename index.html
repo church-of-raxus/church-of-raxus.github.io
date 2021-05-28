@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   </head>
-  <body>
 
+  <body>
     <header>
       <h1>Raxus Church</h1>
     </header>
@@ -42,9 +42,9 @@
           </li>
         </ul>
 
-        <span class="navbar-text" id="coin-count">
-          0 (unofficial) Raxus Coins
-        </span>
+        
+        <span class="navbar-text" id="coin-count"></span>
+          <a id="username" class="btn btn-light" href="https://discord.com/api/oauth2/authorize?client_id=822120932944117770&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2F&response_type=token&scope=identify">Login with Discord</a>
       </div>
     </nav>
 
@@ -123,7 +123,8 @@
     <script src="js/material.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      load();
+      window.onload = () => { load(); }
     </script>
+    </div>
   </body>
 </html>

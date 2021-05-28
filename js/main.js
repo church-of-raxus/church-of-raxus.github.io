@@ -1,8 +1,10 @@
 async function make_news() {
 
+  let id = 0
+
   await fetch("./propaganda/news.json").then((response) => response.json().then(async function(data) {
     for(const post of data.posts) {
-      let uuid = post.id;
+      let uuid = id++;
       await new Promise(r => setTimeout(r, 100));
       let animation = post.animation.name;
       if(animation.length > 0) animation = `animate__${animation}`;
@@ -13,7 +15,7 @@ async function make_news() {
       const title = document.createElement("p");
       title.setAttribute("class", "card-header");
       title.setAttribute("style", `background-color: ${post.color}; font-size: 20px; color: white;`);
-      const titleContent = document.createTextNode(post.header);
+      const titleContent = document.createTextNode(post.author + " | " + post.header);
       const img = document.createElement("img");
       img.setAttribute("src", post.image.path);
       img.setAttribute("alt", post.image.alt);
@@ -80,7 +82,7 @@ async function choose_quote()
 }
 
 async function update_coins()
-{
+{ 
   let coins = localStorage.getItem("RaxusCoinCount");
   if(coins == "NaN")
   {
@@ -96,11 +98,46 @@ async function update_coins()
   }
   coins = parseInt(coins) + 1;
   localStorage.setItem("RaxusCoinCount", coins);
-  document.getElementById("coin-count").innerHTML = `${coins} (unofficial) Raxus Coins`;
+  document.getElementById("coin-count").innerHTML = `${coins} (unofficial) Raxus Coins &nbsp&nbsp`;
 }
 
 async function load()
 {
+  const fragment = new URLSearchParams(window.location.hash.slice(1));
+  const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+    if (accessToken) 
+    { 
+      fetch('https://discord.com/api/users/@me', {
+        headers: {
+        authorization: `${tokenType} ${accessToken}`,
+        },
+      })
+      .then(result => result.json())
+      .then(response => 
+      {
+        const{ id, avatar } = response;
+        const { username, discriminator } = response;
+
+        var usernameField = document.getElementById('username');
+
+        let pictureLink = "https://cdn.discordapp.com/avatars/" + `${id}` + "/" +  `${avatar}` + ".png";
+        let usernameInfo = document.createTextNode(` ${username}#${discriminator}`);
+
+        let pictureNode = document.createElement("img");
+        pictureNode.setAttribute("src", `${pictureLink}`);
+        pictureNode.setAttribute("id", "profile-picture");
+
+        usernameField.innerText = ""; // To clear "Login with *whatever*"
+        usernameField.appendChild(pictureNode);
+        usernameField.appendChild(usernameInfo);
+
+        usernameField.setAttribute('href', 'http://127.0.0.1:5500/');
+        //document.getElementById('username') = ` ${username}#${discriminator}`;
+      })
+      .catch(console.error);
+  };
+
   choose_quote();
   update_coins();
   make_news();
