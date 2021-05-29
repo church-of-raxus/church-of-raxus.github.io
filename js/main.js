@@ -1,6 +1,6 @@
 async function make_news() {
 
-  let id = 0
+  let id = 0;
 
   await fetch("./propaganda/news.json").then((response) => response.json().then(async function(data) {
     for(const post of data.posts) {
@@ -15,7 +15,7 @@ async function make_news() {
       const title = document.createElement("p");
       title.setAttribute("class", "card-header");
       title.setAttribute("style", `background-color: ${post.color}; font-size: 20px; color: white;`);
-      const titleContent = document.createTextNode(post.author + " | " + post.header);
+      const titleContent = document.createTextNode(`${post.author} | ${post.header}`);
       const img = document.createElement("img");
       img.setAttribute("src", post.image.path);
       img.setAttribute("alt", post.image.alt);
@@ -29,7 +29,7 @@ async function make_news() {
         const body = document.createElement("div");
         body.setAttribute("class", "card-body");
         body.setAttribute("style", `background-color: ${post.color};`);
-        if(post.body.title != "" || post.body.description != "")
+        if(post.body.title !== "" || post.body.description !== "")
         {
           const dropdown = document.createElement("div");
           dropdown.setAttribute("class", "dropdown");
@@ -56,10 +56,6 @@ async function make_news() {
           dropdown.appendChild(collapse);
           body.appendChild(dropdown);
         }
-        else
-        {
-
-        }
         article.appendChild(body);
       }
       document.getElementById("posts").appendChild(article);
@@ -68,23 +64,23 @@ async function make_news() {
 
 }
 
-const rgb_shade=(p,c)=>
+const rgb_shade=(p, c) =>
 {
-    var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:255*p,P=P?1+p:1-p;
-    return"rgba"+(d?"a(":"(")+r(i(a[3]=="a"?a.slice(5):a.slice(4))*P+t)+","+r(i(b)*P+t)+","+r(i(c)*P+t)+(d?","+d:", 0.7)");
-}
+  var i=parseInt, r=Math.round, [a, b, c, d]=c.split(","), P=p<0, t=P?0:255*p, P=P?1+p:1-p;
+  return `rgba${d?"a(":"("}${r(i(a[3]=="a"?a.slice(5):a.slice(4))*P+t)},${r(i(b)*P+t)},${r(i(c)*P+t)}${d?`,${d}`:", 0.7)"}`;
+};
 
 async function choose_quote()
 {
-    const quotes = ["I'd never name a baby 'mommy milkers'", "People don’t think it be like it is, but it do.", "You’ll always be my little pogchamp", "Everyone asks if they’re my little pogchamp, but no one ever asks how their server dad is doing", "You're walking in the Caledon Fairgrounds<br>There's no one around and your phone is dead<br>Out of the corner of your eye you spot him:<br>Kan Gao.<br>He's following you, about 30 mooses back.<br>He gets down on all fours and starts shouting probably copyrighted attack warcries<br>He's galloping at you.<br>Kan Gao.<br>You're looking for the World’s Smallest Ferris Wheel but you're all turned around<br>He's almost upon you now<br>And you can see there's blood on his face<br>My God, there's tentacles too!<br>Running for your life (from Kan Gao)<br>He's brandishing long cat (holding a knife)<br>Cthulhu tentacles spreading out (from Kan Gao)<br>Indie Game developer Kan Gao", "In 2003, I was camping in the Chilean mountains. After an Ayahuasan ceremony, a Canadian group camped near by. A man, who I had never met before, snuck into my tent mid-trip and made me write out my hallucinations on alpaca wool, using macaroni, Capri-Suns, and raccoon feces. His name was Kan Gao and my name is Quincy.", "Breasts are temporary. Rome is forever.", /*"Nothing wrong with me loving Moony's mommy milkers","I want Pure to take a picture of my crotch.", "Mommy milkers", */ "Pure-chan...<br>Nyaaa", "*lights a cigarette*", "I’ll show you true pain.", "If humans are innately good, why aren’t all shopping carts returned?", "The worst part of growing up is when no one gets excited if you poop in the toilet."];
-    const ads = ["School's out! Get kids in the Church for summertime fun in the Church of Raxus.", "You Don't Have To Change Who You Are To Join The Church Of Raxus.", "Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.", "The #1 Discord Server to meet new friends."];
-    document.getElementById("quote").innerHTML = `"${quotes[Math.floor(Math.random() * Math.floor(quotes.length))]}"`;
+  const quotes = ["I'd never name a baby 'mommy milkers'", "People don’t think it be like it is, but it do.", "You’ll always be my little pogchamp", "Everyone asks if they’re my little pogchamp, but no one ever asks how their server dad is doing", "You're walking in the Caledon Fairgrounds<br>There's no one around and your phone is dead<br>Out of the corner of your eye you spot him:<br>Kan Gao.<br>He's following you, about 30 mooses back.<br>He gets down on all fours and starts shouting probably copyrighted attack warcries<br>He's galloping at you.<br>Kan Gao.<br>You're looking for the World’s Smallest Ferris Wheel but you're all turned around<br>He's almost upon you now<br>And you can see there's blood on his face<br>My God, there's tentacles too!<br>Running for your life (from Kan Gao)<br>He's brandishing long cat (holding a knife)<br>Cthulhu tentacles spreading out (from Kan Gao)<br>Indie Game developer Kan Gao", "In 2003, I was camping in the Chilean mountains. After an Ayahuasan ceremony, a Canadian group camped near by. A man, who I had never met before, snuck into my tent mid-trip and made me write out my hallucinations on alpaca wool, using macaroni, Capri-Suns, and raccoon feces. His name was Kan Gao and my name is Quincy.", "Breasts are temporary. Rome is forever.", /*"Nothing wrong with me loving Moony's mommy milkers","I want Pure to take a picture of my crotch.", "Mommy milkers", */ "Pure-chan...<br>Nyaaa", "*lights a cigarette*", "I’ll show you true pain.", "If humans are innately good, why aren’t all shopping carts returned?", "The worst part of growing up is when no one gets excited if you poop in the toilet."];
+  const ads = ["School's out! Get kids in the Church for summertime fun in the Church of Raxus.", "You Don't Have To Change Who You Are To Join The Church Of Raxus.", "Learn why Raxus Anode has been named a Freebird Leader in more Analyst Reports than any other Freebird.", "The #1 Discord Server to meet new friends."];
+  document.getElementById("quote").innerHTML = `"${quotes[Math.floor(Math.random() * Math.floor(quotes.length))]}"`;
 }
 
 async function update_coins()
 { 
   let coins = localStorage.getItem("RaxusCoinCount");
-  if(coins == "NaN")
+  if(coins === "NaN")
   {
     coins = 0;
 
@@ -104,23 +100,23 @@ async function update_coins()
 async function load()
 {
   const fragment = new URLSearchParams(window.location.hash.slice(1));
-  const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
-
-    if (accessToken) 
-    { 
-      fetch('https://discord.com/api/users/@me', {
-        headers: {
+  const [accessToken, tokenType] = [fragment.get("access_token"), fragment.get("token_type")];
+  if(accessToken) 
+  { 
+    fetch("https://discord.com/api/users/@me", {
+      headers: {
         authorization: `${tokenType} ${accessToken}`,
-        },
-      })
+      },
+    })
       .then(result => result.json())
       .then(response => 
       {
-        const{ id, avatar } = response;
+        localStorage.setItem("creds", JSON.stringify(response));
+        const { id, avatar } = response;
         const { username, discriminator } = response;
-
-        var usernameField = document.getElementById('username');
-
+  
+        const usernameField = document.getElementById("username");
+  
         let pictureLink = "https://cdn.discordapp.com/avatars/" + `${id}` + "/" +  `${avatar}` + ".png";
         let usernameInfo = document.createTextNode(` ${username}#${discriminator}`);
 
@@ -132,45 +128,65 @@ async function load()
         usernameField.appendChild(pictureNode);
         usernameField.appendChild(usernameInfo);
 
-        usernameField.setAttribute('href', 'http://127.0.0.1:5500/');
-        //document.getElementById('username') = ` ${username}#${discriminator}`;
+        usernameField.setAttribute("href", "./");
       })
       .catch(console.error);
-  };
+  }else{
+    if(localStorage.getItem("creds") !== null) {
+      const creds = JSON.parse(localStorage.getItem("creds"));
+      const { id, avatar } = creds;
+      const { username, discriminator } = creds;
+  
+      const usernameField = document.getElementById("username");
+  
+      let pictureLink = "https://cdn.discordapp.com/avatars/" + `${id}` + "/" +  `${avatar}` + ".png";
+      let usernameInfo = document.createTextNode(` ${username}#${discriminator}`);
+  
+      let pictureNode = document.createElement("img");
+      pictureNode.setAttribute("src", `${pictureLink}`);
+      pictureNode.setAttribute("id", "profile-picture");
+  
+      usernameField.innerText = ""; // To clear "Login with *whatever*"
+      usernameField.appendChild(pictureNode);
+      usernameField.appendChild(usernameInfo);
+  
+      usernameField.setAttribute("href", "./");
+    }
+  }
 
-  choose_quote();
-  update_coins();
-  make_news();
+  await choose_quote();
+  await update_coins();
+  await make_news();
 }
 
 async function links()
 {
-  let links = localStorage.getItem('Links');
-  let titles = localStorage.getItem('Titles');
-  if(links == "NaN")
+  let links = localStorage.getItem("Links");
+  let titles = localStorage.getItem("Titles");
+  if(links === "NaN")
   {
-      localStorage.setItem('Links', 'https://www.raxus-church.ml ');
-      localStorage.setItem('Titles', 'Raxus-Church ');
+    localStorage.setItem("Links", "https://www.raxus-church.ml ");
+    localStorage.setItem("Titles", "Raxus-Church ");
   }
 
   let form = document.getElementById("formforlink");
   form.addEventListener("submit", function (evt) {
-      evt.preventDefault();
-      evt.stopPropagation();
-
-
-      var title = document.forms[0][0].value;
-      var address = document.forms[0][1].value;
-
-      localStorage.setItem('Links', localStorage.getItem('Links') + `${address}` + " ");
-      localStorage.setItem('Titles', localStorage.getItem('Titles') + `${title}` + " ");
-      form.submit();
+    evt.preventDefault();
+    evt.stopPropagation();
+  
+  
+    const title = document.forms[0][0].value;
+    const address = document.forms[0][1].value;
+  
+    localStorage.setItem("Links", `${localStorage.getItem("Links")}${address}` + " ");
+    localStorage.setItem("Titles", `${localStorage.getItem("Titles")}${title}` + " ");
+    form.submit();
   });
 
   let linkes = links.split(" ");
   let titlees = titles.split(" ");
   for(let i = 0; i < linkes.length; i++)
   {
-      document.getElementById("linkstorage").innerHTML += '<a style="font-size: 21px; margin-left: 10px;" class="badge badge-info" href="' + `${linkes[i]}` + '">' + `${titlees[i]}` + '</a>';   
+    document.getElementById("linkstorage").innerHTML += "<a style=\"font-size: 21px; margin-left: 10px;\" class=\"badge badge-info\" href=\"" + `${linkes[i]}` + "\">" + `${titlees[i]}` + "</a>";   
   }
 }

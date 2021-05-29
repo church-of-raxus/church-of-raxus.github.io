@@ -6,7 +6,7 @@ body
 {
     background-color: #101010;
     background-repeat: repeat;
-    background-image: url(/propaganda/background.png);
+    background-image: url(../../propaganda/background.png);
     font-family: Quicksand, sans-serif
 }
 #history
@@ -108,6 +108,10 @@ ul.nav li a
 {
     font-size: 21px; 
     margin-left: 10px;
+}
+
+.h-full {
+    height: 100vh;
 }
 
 @media only screen and (max-width: 991px) 
