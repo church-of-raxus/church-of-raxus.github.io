@@ -16,8 +16,6 @@
     <link href="css/material.min.css" rel="stylesheet">
     <link href="./css/pages/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -35,30 +33,93 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="history.html">History</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="https://discord.gg/XaucJHh8J2">Join church</a>
           </li>
         </ul>
 
         
-        <span class="navbar-text" id="coin-count"></span>
-          <a id="username" class="btn btn-light" href="https://discord.com/api/oauth2/authorize?client_id=822120932944117770&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2F&response_type=token&scope=identify">Login with Discord</a>
-      </div>
+        <!--<span class="navbar-text" id="coin-count"></span>-->
+        <div class="dropdown">
+          <button class="btn btn-light" type="button" id="profile_button" data-toggle="modal" data-target="#ToS" aria-haspopup="true" aria-expanded="false">Login with Discord</button>
+          
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profile_button">
+            <span class="dropdown-item-text" id="joindate_display"></span>
+            <span class="dropdown-item-text" id="coin-count"></span>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="http://www.raxus-church.ml/">Log out</a>
+          </div>
+        </div>
     </nav>
 
     <div class="wrapper">
       <main>
+
+        <!-- ToS Popup Message -->
+          <div class="modal fade" id="ToS" tabindex="-1" role="dialog" aria-labelledby="ToS" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">User agreement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="agreement" id="agreement_check">
+                    <label class="form-check-label" for="agreement_check">I accept the <a href="./terms-of-service.html">Terms Of Service and Privacy Policy</a>.</label>
+                  </div>
+                </div>
+                <div class="modal-footer" id="agree_section">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         <noscript>This webpage requires JavaScript to work properly. Please turn it on or use another browser.</noscript>
-        <div class="alert alert-light animate__animated animate__jackInTheBox text-center" role="alert">
-          <blockquote class="blockquote">
-            <em class="mb-0" id="quote">"I'd never name a baby 'mommy milkers'"</em>
-            <footer class="blockquote-footer"><cite>Raxus</cite> said once.</footer>
-          </blockquote>
-          <p class="mb-0" style="font-size: 18px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
+
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" style="color: white" id="nav-posts-tab" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-home" aria-selected="true">Browse posts</a>
+            <a class="nav-item nav-link disabled" style="color: white" id="nav-submit-tab" data-toggle="tab" href="#nav-submit" role="tab" aria-controls="nav-profile" aria-selected="false">Create a post</a>
+            <a class="nav-item nav-link disabled" style="color: white" id="nav-shop-tab" data-toggle="tab" href="#nav-shop" role="tab" aria-controls="nav-profile" aria-selected="false">Shop</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">
+            <br>
+            <div class="alert alert-light animate__animated animate__jackInTheBox text-center" role="alert">
+              <blockquote class="blockquote">
+                <em class="mb-0" id="quote">"I'd never name a baby 'mommy milkers'"</em>
+                <footer class="blockquote-footer"><cite>Raxus</cite> said once.</footer>
+              </blockquote>
+              <p class="mb-0" style="font-size: 18px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
+            </div>
+            <div id="posts"></div>
+          </div>
+          <div class="tab-pane fade" id="nav-submit" role="tabpanel" aria-labelledby="nav-submit-tab">
+            <form style="background-color: white;">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Description</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="choose_color">Color</label>
+                <input type="color" style="height: 64px;" class="form-control" id="choose_color" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Yes</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="nav-shop" role="tabpanel" aria-labelledby="nav-shop-tab">
+            <p class="btn btn-light">This is fun shop tab look</p>
+          </div>
         </div>
-        <div id="posts"></div>
       </main>
 
       <div class="left animate__animated animate__fadeIn">
@@ -115,6 +176,13 @@
         </ul>
       </footer>
     </div>
+    
+    <div class="alert alert-warning alert-dismissible fade show" id="disclaimer" role="alert">
+      By using this website you therefore agree to its <a href="./terms-of-service.html" class="alert-link sticky-top"><em>Terms Of Service and Privacy Policy</em></a>.
+      <button type="button" class="close" data-dismiss="alert" onclick="agree_check()" aria-label="Close" style="font-size: 20px;">
+        Got it
+      </button>
+    </div>
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -124,6 +192,10 @@
     <script src="./js/main.js"></script>
     <script>
       window.onload = () => { load(); }
+      function agree_check()
+      {
+        localStorage.setItem("agreed_with", "1.0");
+      }
     </script>
     </div>
   </body>
