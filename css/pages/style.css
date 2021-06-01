@@ -137,6 +137,10 @@ a.disabled
     height: 100vh;
 }
 
+.font-size-32 {
+    font-size: 32px;
+}
+
 @media only screen and (max-width: 991px) 
 {
     .left 
