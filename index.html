@@ -79,9 +79,6 @@
             </div>
           </div>
         </div>
-    
-        <noscript>This webpage requires JavaScript to work properly. Please turn it on or use another browser.</noscript>
-    
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" style="color: white" id="nav-posts-tab" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-home" aria-selected="true">Browse posts</a>
@@ -100,6 +97,11 @@
               <p class="mb-0" style="font-size: 18px;">Next word is <a href="https://discord.gg/XaucJHh8J2" class="alert-link"><strong>up to you!</strong></a></p>
             </div>
             <div id="posts"></div>
+            <div id="loadPosts" class="mt-2">
+              <div class="alert alert-light animate__animated animate__jackInTheBox text-center" role="alert">
+                <button class="btn btn-outline" type="button" onclick="load()">Load More Posts</button>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="nav-submit" role="tabpanel" aria-labelledby="nav-submit-tab">
             <form style="background-color: white;">
@@ -190,14 +192,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="js/material.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script>
+    <script type="module">
+      import {main, loadMorePosts} from "./js/main.js";
+      
       window.onload = () => {
-        load();
+        main();
       }
-      function agree_check() {
-        localStorage.setItem("agreed_with", "1.0");
-      }
+      
+      window.load = function() {
+        loadMorePosts();
+      };
+      
+      // function load() {
+      //   loadMorePosts();
+      // }
     </script>
   </body>
 </html>
