@@ -1,4 +1,3 @@
-import temp from "./temp.js";
 import fetch from "./modules/post/fetch.js";
 import {showTerms, hideTerms} from "./modules/other/terms.js";
 import quotes from "./modules/other/quotes.js";
@@ -15,12 +14,11 @@ export function main() {
       //TODO: show failure notif
     }
   }
-  temp();
   showTerms();
   hideTerms();
   quotes();
   login();
-  //fetch posts
+  loadMorePosts();
 }
 
 export function loadMorePosts() {

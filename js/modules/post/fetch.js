@@ -1,6 +1,7 @@
 import ads from "../other/ads.js";
 
 export default function(currentPost) {
+  let id = currentPost;
   fetch("https://s1.thomasricci.dev:2087/posts/fetch", {
     method: "POST",
     mode: "cors",
@@ -13,17 +14,18 @@ export default function(currentPost) {
   }).then(response => response.json()).then(response => {
     if(response.success) {
       for(const post of response.posts) {
+        let uuid = id++;
         //gen post img color
         let color = post.color;
         color = color.substring(0, color.length - 2);
         color += "0.8)";
         //gen post container
         const article = document.createElement("div");
-        article.setAttribute("class", "alert text-center animate__animated animate__bounceIn");
+        article.setAttribute("class", "card text-center animate__animated animate__bounceIn");
         article.setAttribute("style", `background-color: ${color};`);
         //gen post text
         const title = document.createElement("p");
-        title.setAttribute("class", "");
+        title.setAttribute("class", "card-header");
         title.setAttribute("style", `background-color: ${post.color}; font-size: 20px; color: white;`);
         const titleContent = document.createTextNode(post.header);
         const author = document.createElement("div");
@@ -33,7 +35,7 @@ export default function(currentPost) {
         const img = document.createElement("img");
         img.setAttribute("src", `data:image/png;base64,${post.image.base64}`);
         img.setAttribute("alt", `${post.author}'s post image`);
-        img.setAttribute("class", "m-auto pt-2 pb-2");
+        img.setAttribute("class", "card-img-top m-auto pt-2 pb-2");
         img.setAttribute("style", "max-height: 500px; max-width: 85%;");
         //build post
         title.appendChild(titleContent);
@@ -44,7 +46,7 @@ export default function(currentPost) {
         if("body" in post) {
           //gen body container
           const body = document.createElement("div");
-          body.setAttribute("class", "alert");
+          body.setAttribute("class", "card-body");
           body.setAttribute("style", `background-color: ${post.color};`);
           if(post.body.title !== "" || post.body.description !== "") {
             //gen body button
@@ -64,7 +66,7 @@ export default function(currentPost) {
             collapse.setAttribute("id", uuid.toString());
             collapse.setAttribute("class", "collapse");
             const description = document.createElement("div");
-            description.setAttribute("class", "alert text-white");
+            description.setAttribute("class", "card card-body text-white");
             description.setAttribute("style", `background-color: ${color}; font-size: 20px;`);
             const descriptionContent = document.createTextNode(post.body.description);
             //build post body
@@ -82,8 +84,8 @@ export default function(currentPost) {
         document.getElementById("posts").appendChild(article);
       }
     }
+    //generate ad
+    ads();
   }).catch(console.error);
-  //generate ad
-  ads();
   return currentPost + 3;
 }

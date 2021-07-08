@@ -5,7 +5,7 @@ export function showTerms() {
   agree_button.setAttribute("class", "btn btn-primary");
   agree_button.setAttribute("onclick", "agree_check()");
   agree_button.setAttribute("type", "button");
-  agree_button.setAttribute("href", "https://discord.com/api/oauth2/authorize?client_id=822120932944117770&redirect_uri=http%3A%2F%2Flocalhost%3A5500%2Fchurch-of-raxus-frontend%2F&response_type=code&scope=identify");
+  agree_button.setAttribute("href", "https://discord.com/api/oauth2/authorize?client_id=822120932944117770&redirect_uri=http%3A%2F%2Flocalhost%3A5500%2Ffrontend%2F&response_type=code&scope=identify");
   agree_button.innerText = "Continue";
   let agree_section = document.getElementById("agree_section");
   //toggle terms on aggree
