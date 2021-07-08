@@ -9,9 +9,9 @@ export function main() {
   if(window.location.search !== "") {
     const params = new URLSearchParams(window.location.search);
     if(params.get("logout")) {
-      //TODO: show logout notif
+      alert("You have been logged out.")
     }else if(params.get("loginfailure")) {
-      //TODO: show failure notif
+      alert("Login failed.")
     }
   }
   showTerms();
